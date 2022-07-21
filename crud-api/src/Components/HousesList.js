@@ -1,10 +1,10 @@
 import React from 'react';
 import { House } from './House';
-import { houseApi} from '../rest/HousesApi';
+import { housesApi} from '../rest/HousesApi';
 
 export class HousesList extends React.Component {
     state = {
-        houses = []
+        houses: []
     };
 
     componentDidMount() {
@@ -12,12 +12,12 @@ export class HousesList extends React.Component {
     };
 
     fetchHouses = async () => {
-        const houses = await HousesApi.get();
+        const houses = await housesApi.get();
         this.setState({houses});
     };
 
     updateHouse = async (updateHouse) => {
-        await HousesApi.put(updatedHouse);
+        await housesApi.put(updateHouse);
         this.fetchHouses();
     };
 

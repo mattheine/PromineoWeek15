@@ -30,4 +30,4 @@ class HousesApi {
 
 }
 
-export consrt housesApi = new HousesApi();
+export const housesApi = new HousesApi();
